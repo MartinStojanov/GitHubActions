@@ -53,10 +53,12 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-
-
-  docker:
-  needs: linter
+          
+           docker:
+           
+           
+           
+    needs: linter
     runs-on: ubuntu-latest
     steps:
       -
@@ -77,5 +79,6 @@ jobs:
         with:
           push: true
           tags: martin2555/kii-labs-01:latest
+ 
           
           
